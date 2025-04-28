@@ -14,12 +14,6 @@ interface CategoryPageProps {
 	params: {
 		category: Category;
 	};
-	Item: {
-		id: number;
-		title: string;
-		desc: string;
-		image: string;
-	};
 }
 
 const getData = (category: string): Item[] => {
