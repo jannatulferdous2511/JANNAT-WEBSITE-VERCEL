@@ -12,13 +12,19 @@ import styles from './page.module.css';
 
 interface CategoryPageProps {
 	params: {
-		category: string;
+		category: Category;
+	};
+	Item: {
+		id: number;
+		title: string;
+		desc: string;
+		image: string;
 	};
 }
 
-const getData = (cat: string): Item[] => {
-	if (cat in items) {
-		return items[cat as Category];
+const getData = (category: string): Item[] => {
+	if (category in items) {
+		return items[category as Category];
 	}
 	notFound();
 };
